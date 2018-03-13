@@ -25,11 +25,18 @@
   	  <label class="col-sm-1 col-form-label-lg" for="email">Email:</label>
   	  <input class="form-control form-control-lg" type="text" name="email" th:field="*{email}" placeholder="email" id="email"/>
   	  <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
-    </div>  
+    </div>
+    <br/>
+    <div class="form-group">
+      <label class="col-sm-1 col-form-label-lg" for="email">EIN:</label>
+      <input class="form-control form-control-lg" type="text" name="ein" th:field="*{ein}" placeholder="EIN" id="ein"/>
+      <label th:if="${#fields.hasErrors('ein')}" th:errors="*{ein}"></label>
+    </div>
   	<br/><br/>
   	<button class="btn btn-success" id="btn-success" type="submit">Submit</button> 
   </form>
   </div>
+  <br/><br/><br/>
   <footer>
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
       <a class="navbar-brand" href="https://github.com/josdem/spring-boot-training">josdem 2018</a>

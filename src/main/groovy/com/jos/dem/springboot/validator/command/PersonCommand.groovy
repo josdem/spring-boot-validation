@@ -15,4 +15,8 @@ class PersonCommand implements Command{
 	@Size(min=1, max=250)
 	String email
 
+	@NotNull
+	@Size(min=9, max=9)
+	String ein
+
 }

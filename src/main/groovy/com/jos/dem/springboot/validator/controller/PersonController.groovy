@@ -56,7 +56,7 @@ class PersonController {
 			modelAndView.addObject('personCommand', personCommand)
 			return modelAndView
 		}
-		Person person = new Person(nickname:personCommand.nickname, email:personCommand.email)
+		Person person = new Person(nickname:personCommand.nickname, email:personCommand.email, ein:personCommand.ein)
 		personRepository.save(person)
 		List<Person> persons = personRepository.findAll()
 		modelAndView.addObject('persons', persons)
