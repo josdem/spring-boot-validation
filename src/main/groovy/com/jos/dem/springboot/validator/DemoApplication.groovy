@@ -1,4 +1,4 @@
-package com.example.springbootvalidation
+package com.jos.dem.springboot.validator
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -9,4 +9,5 @@ class DemoApplication {
 	static void main(String[] args) {
 		SpringApplication.run DemoApplication, args
 	}
+
 }
