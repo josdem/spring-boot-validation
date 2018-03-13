@@ -9,12 +9,15 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.servlet.ModelAndView
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
+import org.springframework.web.bind.annotation.InitBinder
+import org.springframework.web.bind.WebDataBinder
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.validation.BindingResult
 
 import com.jos.dem.springboot.validation.model.Person
 import com.jos.dem.springboot.validation.command.Command
 import com.jos.dem.springboot.validation.command.PersonCommand
+import com.jos.dem.springboot.validation.validator.PersonValidator
 import com.jos.dem.springboot.validation.repository.PersonRepository
 
 import org.slf4j.Logger
@@ -26,8 +29,15 @@ class PersonController {
 
 	@Autowired
 	PersonRepository personRepository
+	@Autowired
+  PersonValidator personValidator
 
 	Logger log = LoggerFactory.getLogger(this.class)
+
+	@InitBinder
+  private void initBinder(WebDataBinder binder) {
+    binder.addValidators(userValidator)
+  }
 
 	@RequestMapping(method=GET)
 	ModelAndView getAll(){

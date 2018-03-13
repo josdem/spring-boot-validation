@@ -2,7 +2,7 @@ package com.jos.dem.springboot.validation.command
 
 import javax.validation.constraints.Size
 import javax.validation.constraints.NotNull
-import org.hibernate.validation.constraints.Email
+import org.hibernate.validator.constraints.Email
 
 class PersonCommand implements Command{
 
