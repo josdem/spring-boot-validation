@@ -1,4 +1,4 @@
-package com.jos.dem.springboot.validator.model
+package com.jos.dem.springboot.validation.model
 
 import static javax.persistence.GenerationType.AUTO
 

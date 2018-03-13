@@ -1,4 +1,4 @@
-package com.jos.dem.springboot.validator.controller
+package com.jos.dem.springboot.validation.controller
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET
 import static org.springframework.web.bind.annotation.RequestMethod.POST
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.validation.BindingResult
 
-import com.jos.dem.springboot.validator.model.Person
-import com.jos.dem.springboot.validator.command.Command
-import com.jos.dem.springboot.validator.command.PersonCommand
-import com.jos.dem.springboot.validator.repository.PersonRepository
+import com.jos.dem.springboot.validation.model.Person
+import com.jos.dem.springboot.validation.command.Command
+import com.jos.dem.springboot.validation.command.PersonCommand
+import com.jos.dem.springboot.validation.repository.PersonRepository
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

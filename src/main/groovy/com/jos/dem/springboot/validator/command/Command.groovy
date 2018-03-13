@@ -1,4 +1,4 @@
-package com.jos.dem.springboot.validator.command
+package com.jos.dem.springboot.validation.command
 
 import java.io.Serializable
 
