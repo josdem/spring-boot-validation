@@ -13,7 +13,7 @@ class PersonValidatorSpec extends Specification {
 
   void "should detect EIN error format"(){
     given:'An EIN format'
-      String ein = '1'
+      String ein = 'josdem'
     and:'A target and a Error'
       PersonCommand target = Mock(PersonCommand)
       Errors errors = Mock(Errors)
@@ -23,4 +23,18 @@ class PersonValidatorSpec extends Specification {
     then:'We expect an error added'
       1 * errors.rejectValue('ein','ein.error.format')
   }
+
+  void "should not detect EIN error format"(){
+    given:'An EIN format'
+      String ein = '123456789'
+    and:'A target and a Error'
+      PersonCommand target = Mock(PersonCommand)
+      Errors errors = Mock(Errors)
+    when:'We validate EIN'
+      target.ein >> ein
+      validator.validate(target, errors)
+    then:'We expect an error added'
+      0 * errors.rejectValue('ein','ein.error.format')
+  }
+
 }

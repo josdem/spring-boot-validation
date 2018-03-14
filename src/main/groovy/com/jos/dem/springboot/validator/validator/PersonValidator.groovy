@@ -21,7 +21,7 @@ class PersonValidator implements Validator {
   }
 
   private void validateEin(Errors errors, PersonCommand command) {
-    if(command.ein.isNumber()){
+    if(!command.ein.isNumber()){
     	errors.rejectValue('ein', 'ein.error.format')
     }
   }
