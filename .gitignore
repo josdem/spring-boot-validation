@@ -4,3 +4,4 @@
 **swo
 node_modules/
 src/main/resources/static/
+src/main/resources/application.properties
