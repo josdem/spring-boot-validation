@@ -1,7 +1,7 @@
 Spring Boot Validation
 ----------------------------
 
-This project shows how to use Spring Data Validator in a Spring Boot project
+This project shows how to create custom validation in a Spring Boot project
 
 
 #### To run the project
