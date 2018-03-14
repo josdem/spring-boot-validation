@@ -4,7 +4,7 @@ import javax.validation.constraints.Size
 import javax.validation.constraints.NotNull
 import org.hibernate.validator.constraints.Email
 
-class PersonCommand implements Command{
+class PersonCommand implements Command {
 
 	@NotNull
 	@Size(min=3, max=50)
