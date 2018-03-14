@@ -22,7 +22,7 @@ class PersonValidator implements Validator {
 
   private void validateEin(Errors errors, PersonCommand command) {
     if(command.ein.isNumber()){
-    	errors.rejectValue('ein', 'EIN should be a nine digit format number')
+    	errors.rejectValue('ein', 'ein.error.format')
     }
   }
 

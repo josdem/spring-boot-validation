@@ -36,13 +36,13 @@ class PersonController {
 
 	@InitBinder
   private void initBinder(WebDataBinder binder) {
-    binder.addValidators(userValidator)
+    binder.addValidators(personValidator)
   }
 
 	@RequestMapping(method=GET)
 	ModelAndView getAll(){
 		log.info 'Listing all persons'
-		ModelAndView modelAndView = new ModelAndView('persons/list')		
+		ModelAndView modelAndView = new ModelAndView('persons/list')
 		List<Person> persons = personRepository.findAll()
 		modelAndView.addObject('persons', persons)
 		modelAndView
@@ -72,5 +72,5 @@ class PersonController {
 		modelAndView.addObject('persons', persons)
 		modelAndView
 	}
-	
+
 }

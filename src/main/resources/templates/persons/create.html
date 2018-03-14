@@ -28,12 +28,12 @@
     </div>
     <br/>
     <div class="form-group">
-      <label class="col-sm-1 col-form-label-lg" for="email">EIN:</label>
+      <label class="col-sm-1 col-form-label-lg" for="ein">EIN:</label>
       <input class="form-control form-control-lg" type="text" name="ein" th:field="*{ein}" placeholder="EIN" id="ein"/>
       <label th:if="${#fields.hasErrors('ein')}" th:errors="*{ein}"></label>
     </div>
   	<br/><br/>
-  	<button class="btn btn-success" id="btn-success" type="submit">Submit</button> 
+  	<button class="btn btn-success" id="btn-success" type="submit">Submit</button>
   </form>
   </div>
   <br/><br/><br/>
