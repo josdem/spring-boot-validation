@@ -1,10 +1,10 @@
-package com.jos.dem.springboot.validation.controller;
+package com.josdem.springboot.validation.controller;
 
-import com.jos.dem.springboot.validation.command.Command;
-import com.jos.dem.springboot.validation.command.PersonCommand;
-import com.jos.dem.springboot.validation.model.Person;
-import com.jos.dem.springboot.validation.repository.PersonRepository;
-import com.jos.dem.springboot.validation.validator.PersonValidator;
+import com.josdem.springboot.validation.command.Command;
+import com.josdem.springboot.validation.command.PersonCommand;
+import com.josdem.springboot.validation.model.Person;
+import com.josdem.springboot.validation.repository.PersonRepository;
+import com.josdem.springboot.validation.validator.PersonValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

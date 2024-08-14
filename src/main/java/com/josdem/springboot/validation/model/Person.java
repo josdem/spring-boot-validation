@@ -1,10 +1,7 @@
-package com.jos.dem.springboot.validation.model;
+package com.josdem.springboot.validation.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

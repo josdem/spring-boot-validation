@@ -1,6 +1,6 @@
-package com.jos.dem.springboot.validation.repository;
+package com.josdem.springboot.validation.repository;
 
-import com.jos.dem.springboot.validation.model.Person;
+import com.josdem.springboot.validation.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

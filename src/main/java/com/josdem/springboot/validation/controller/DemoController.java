@@ -1,4 +1,4 @@
-package com.jos.dem.springboot.validation.controller;
+package com.josdem.springboot.validation.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

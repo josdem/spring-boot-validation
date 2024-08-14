@@ -1,4 +1,4 @@
-package com.jos.dem.springboot.validation;
+package com.josdem.springboot.validation;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

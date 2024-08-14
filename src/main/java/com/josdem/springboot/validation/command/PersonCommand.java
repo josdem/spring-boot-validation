@@ -1,4 +1,4 @@
-package com.jos.dem.springboot.validation.command;
+package com.josdem.springboot.validation.command;
 
 import lombok.Getter;
 import lombok.Setter;

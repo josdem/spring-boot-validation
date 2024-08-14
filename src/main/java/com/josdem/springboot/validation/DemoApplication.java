@@ -1,4 +1,4 @@
-package com.jos.dem.springboot.validation;
+package com.josdem.springboot.validation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
