@@ -7,13 +7,13 @@ This project shows how to create custom validation in a Spring Boot project
 #### To run the project
 
 ```bash
-gradle bootRun
+./gradlew bootRun
 ```
 
 #### To test the project
 
 ```bash
-gradle test
+./gradlew test
 ```
 
 
