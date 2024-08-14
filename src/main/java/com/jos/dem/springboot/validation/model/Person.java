@@ -2,6 +2,7 @@ package com.jos.dem.springboot.validation.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -14,6 +15,7 @@ import static javax.persistence.GenerationType.AUTO;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
 public class Person {
 
