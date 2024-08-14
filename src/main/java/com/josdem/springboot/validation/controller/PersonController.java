@@ -42,8 +42,7 @@ public record PersonController(PersonRepository personRepository,
     ModelAndView create() {
         log.info("Creating person");
         ModelAndView modelAndView = new ModelAndView("persons/create");
-        Command personCommand = new PersonCommand();
-        modelAndView.addObject("personCommand", personCommand);
+        modelAndView.addObject("personCommand", new PersonCommand());
         return modelAndView;
     }
 
