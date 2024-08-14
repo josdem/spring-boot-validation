@@ -1,10 +1,10 @@
 package com.josdem.springboot.validation.controller;
 
-import com.josdem.springboot.validation.command.Command;
 import com.josdem.springboot.validation.command.PersonCommand;
 import com.josdem.springboot.validation.model.Person;
 import com.josdem.springboot.validation.repository.PersonRepository;
 import com.josdem.springboot.validation.validator.PersonValidator;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @Slf4j

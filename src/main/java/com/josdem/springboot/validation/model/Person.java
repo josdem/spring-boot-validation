@@ -1,14 +1,13 @@
 package com.josdem.springboot.validation.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-import static javax.persistence.GenerationType.AUTO;
+import static jakarta.persistence.GenerationType.AUTO;
 
 @Entity
 @Data
