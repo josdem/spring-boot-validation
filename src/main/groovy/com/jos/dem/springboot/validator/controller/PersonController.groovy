@@ -24,7 +24,7 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 @Controller
-@RequestMapping('persons/**')
+@RequestMapping('/persons')
 class PersonController {
 
 	@Autowired
