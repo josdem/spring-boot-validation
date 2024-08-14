@@ -5,7 +5,6 @@ import com.josdem.springboot.validation.command.PersonCommand;
 import com.josdem.springboot.validation.model.Person;
 import com.josdem.springboot.validation.repository.PersonRepository;
 import com.josdem.springboot.validation.validator.PersonValidator;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -22,11 +21,8 @@ import java.util.List;
 @Slf4j
 @Controller
 @RequestMapping("/persons")
-@RequiredArgsConstructor
-public class PersonController {
-
-    private final PersonRepository personRepository;
-    private final PersonValidator personValidator;
+public record PersonController(PersonRepository personRepository,
+                               PersonValidator personValidator) {
 
     @InitBinder
     private void initBinder(WebDataBinder binder) {
