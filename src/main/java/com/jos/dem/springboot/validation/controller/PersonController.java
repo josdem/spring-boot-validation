@@ -5,39 +5,35 @@ import com.jos.dem.springboot.validation.command.PersonCommand;
 import com.jos.dem.springboot.validation.model.Person;
 import com.jos.dem.springboot.validation.repository.PersonRepository;
 import com.jos.dem.springboot.validation.validator.PersonValidator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.List;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
-
+@Slf4j
 @Controller
 @RequestMapping("/persons")
+@RequiredArgsConstructor
 public class PersonController {
 
-    @Autowired
-    private PersonRepository personRepository;
-    @Autowired
-    private PersonValidator personValidator;
-
-    private Logger log = LoggerFactory.getLogger(this.getClass());
+    private final PersonRepository personRepository;
+    private final PersonValidator personValidator;
 
     @InitBinder
     private void initBinder(WebDataBinder binder) {
         binder.addValidators(personValidator);
     }
 
-    @RequestMapping(method = GET)
+    @GetMapping
     ModelAndView getAll() {
         log.info("Listing all persons");
         ModelAndView modelAndView = new ModelAndView("persons/list");
@@ -46,7 +42,7 @@ public class PersonController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "create", method = GET)
+    @GetMapping(value = "/create")
     ModelAndView create() {
         log.info("Creating person");
         ModelAndView modelAndView = new ModelAndView("persons/create");
@@ -55,7 +51,7 @@ public class PersonController {
         return modelAndView;
     }
 
-    @RequestMapping(method = POST)
+    @PostMapping
     ModelAndView save(@Valid PersonCommand personCommand, BindingResult bindingResult) {
         log.info("Registering new Person: {}", personCommand.getNickname());
         ModelAndView modelAndView = new ModelAndView("persons/list");
