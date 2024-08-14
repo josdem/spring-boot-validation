@@ -1,19 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
-  <link rel="stylesheet" th:href="@{/assets/third-party/bootstrap/dist/css/bootstrap.min.css}" />
+    <title th:text="#{app.title}"/>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <h3><font color="white">Spring Boot</font></h3>
-  </nav>
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome!</h1>
-      <p>Spring Boot Validator</p>
-      <a href="https://github.com/josdem/spring-boot-training" class="btn btn-primary btn-lg" role="button">Learn more</a>
-    </div>
-  </div>
-  <div class="container">
+  <h1 th:text="#{person.register}" />
   <form id="create" th:action="@{/persons}" th:object="${personCommand}" method="post">
     <div class="form-group">
   	  <label class="col-sm-1 col-form-label-lg" for="nickname">Nickname:</label>
@@ -33,14 +24,10 @@
       <label th:if="${#fields.hasErrors('ein')}" th:errors="*{ein}"></label>
     </div>
   	<br/><br/>
-  	<button class="btn btn-success" id="btn-success" type="submit">Submit</button>
+  	<button type="submit">Submit</button>
   </form>
-  </div>
-  <br/><br/><br/>
   <footer>
-    <nav class="navbar navbar-inverse navbar-fixed-bottom">
-      <a class="navbar-brand" href="https://github.com/josdem/spring-boot-training">josdem 2018</a>
-    </nav>
+      <a href="https://josdem.io/">josdem</a>
   </footer>
 </body>
 </html>

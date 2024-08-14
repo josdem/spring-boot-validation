@@ -1,5 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title th:text="#{app.title}"/>
+</head>
 <body>
+  <h1 th:text="#{person.list}" />
+  <div th:if="${persons.isEmpty()}">
+      <div>
+          <p th:text="#{person.list.empty}"/>
+          <a th:href="@{/persons/create}"><p th:text="#{person.register}"/></a>
+      </div>
+  </div>
   <div th:each="person : ${persons}">
   	<h3 th:text="${person.nickname}"/>
   	<p th:text="${person.email}"/>

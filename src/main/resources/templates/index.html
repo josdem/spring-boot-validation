@@ -1,3 +1,14 @@
-<html>
-Hello World!
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title th:text="#{app.title}"/>
+</head>
+<body>
+  <h1 th:text="#{app.title}"/>
+  <a th:href="@{/persons}"><p th:text="#{person.list}"/></a>
+  <a th:href="@{/persons/create}"><p th:text="#{person.register}"/></a>
+  <footer>
+      <a href="https://josdem.io/">josdem</a>
+  </footer>
+</body>
 </html>

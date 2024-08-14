@@ -21,3 +21,5 @@ spring:
     generateDdl: true
     hibernate:
       DdlAuto: update
+  messages:
+    basename: i18n/messages
