@@ -1,8 +1,8 @@
 spring:
   datasource:
     url:  jdbc:mysql://localhost:3306/spring_boot_jpa
-    username:  ${USER}
-    password:  ${PASSWORD}
+    username:  springValidatorUser
+    password:  spr1ngV4l1d4t0r.DB
     driverClassName: com.mysql.jdbc.Driver
     maxActive:  50
     maxIdle: 5
