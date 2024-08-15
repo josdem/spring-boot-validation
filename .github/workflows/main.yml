@@ -1,0 +1,29 @@
+name: Run Tests
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+env:
+  HOST: localhost
+  DATABASE: spring_boot_jpa
+  USER: ${{ secrets.USERNAME }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: gradle
+      - name: Start MySQL
+        run: |
+          sudo /etc/init.d/mysql start
+          mysql -e "CREATE DATABASE $DATABASE;" -u$USER -p$PASSWORD
+      - name: Build with Gradle
+        run: ./gradlew test
