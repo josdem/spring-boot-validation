@@ -1,5 +1,6 @@
 Spring Boot Validation
 ----------------------------
+[![GitHub](https://github.com/josdem/spring-boot-validation/actions/workflows/main.yml/badge.svg)](https://github.com/josdem/spring-boot-validation/actions)
 
 This project shows how to create custom validation in a Spring Boot project
 
